@@ -1,0 +1,1 @@
+def calcular_Y(x:float, m:float,b:flo)
