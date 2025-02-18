@@ -78,6 +78,7 @@ def adivina_letra(abc:dict, palabra:str, letras_adivinadas:set, turnos:int)->int
 if __name__ == '__main__':
     plantillas = carga_plantillas('plantilla')
     despliega_plantilla(plantillas, 5)
+
     lista_oraciones = carga_archivo_texto('./datos/pg15532.txt')
     lista_palabras = obten_palabras(lista_oraciones)
     print(len(lista_palabras))

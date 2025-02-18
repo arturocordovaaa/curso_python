@@ -30,7 +30,7 @@ def main(archivo_texto:str, nombre_plantilla='plantilla'):
             break
     fn.despliega_plantilla(plantillas, o)
     print(f"La palabra era: {p}")
-
+    
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Juego del ahorcado')
     parser.add_argument('-a', '--archivo', help='Archivo de texto con palabras a adivinar', default='./datos/pg15532.txt')
