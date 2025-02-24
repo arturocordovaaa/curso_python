@@ -33,3 +33,4 @@ if __name__ == "__main__":
     lakers = Team("Los Angeles Lakers", s, [a1, a2, a3, a4, a5])
     print(lakers)
     print(repr(lakers))
+    print(lakers.to_json())
