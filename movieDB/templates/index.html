@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{%block title%}Movie Database{% endblock %}
+
+{% block body %}
+
+<!-- Hero Section -->
+<section class="bg-dark text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">🎬 Bienvenido a MovieDB</h1>
+        <p class="lead">Explora un mundo de películas, actores y todo lo relacionado con el cine.</p>
+        <a href="/peliculas" class="btn btn-primary btn-lg mt-3">Explorar Películas</a>
+    </div>
+</section>
+
+<!-- Featured Movies -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Películas destacadas</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for pelicula in peliculas %}
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{{ pelicula.url_poster }}" class="card-img-top" alt="{{ pelicula.titulo_pelicula }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pelicula.titulo_pelicula }}</h5>
+                    <p class="card-text">Una breve descripción o sinopsis de esta increíble película.</p>
+                    <a href="/pelicula/{{ pelicula.id_pelicula }}" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- Call to Action -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h2>¿Eres un fanático del cine?</h2>
+        <p class="mb-4">Regístrate o empieza a explorar nuestra base de datos completa de películas y actores.</p>
+        <a href="/registrate" class="btn btn-outline-light btn-lg">Registrate</a>
+    </div>
+</section>
+{% endblock %}
